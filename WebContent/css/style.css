@@ -1,0 +1,52 @@
+@charset "utf-8";
+.jPaginate{height:34px;position:relative;color:#a5a5a5;font-size:small;width:100%;}
+.jPaginate a{line-height:18px;height:18px;overflow:hidden;cursor:pointer;padding:2px 5px;margin:2px;float:left;}
+.jPag-control-back{position:absolute;left:0px;}
+.jPag-control-front{position:absolute;top:0px;}
+.jPaginate span{cursor:pointer;}
+ul.jPag-pages{float:left;list-style-type:none;margin:0px 0px 0px 0px;padding:0px;}
+ul.jPag-pages li{display:inline;float:left;padding:0px;margin:0px;}
+ul.jPag-pages li a{float:left;padding:2px 8px;}
+span.jPag-current{cursor:default;font-weight:normal;line-height:18px;height:18px;padding:2px 8px;margin:2px;float:left;}
+ul.jPag-pages li span.jPag-previous,ul.jPag-pages li span.jPag-next,span.jPag-sprevious,span.jPag-snext,ul.jPag-pages li span.jPag-previous-img,ul.jPag-pages li span.jPag-next-img,span.jPag-sprevious-img,span.jPag-snext-img{height:22px;margin:2px;float:left;line-height:18px;}
+ul.jPag-pages li span.jPag-previous,ul.jPag-pages li span.jPag-previous-img{margin:2px 0px 2px 2px;font-size:12px;font-weight:bold;width:10px;}
+ul.jPag-pages li span.jPag-next,ul.jPag-pages li span.jPag-next-img{margin:2px 2px 2px 0px;font-size:12px;font-weight:bold;width:10px;}
+span.jPag-sprevious,span.jPag-sprevious-img{margin:2px 0px 2px 2px;font-size:18px;width:15px;text-align:right;}
+span.jPag-snext,span.jPag-snext-img{margin:2px 2px 2px 0px;font-size:18px;width:15px; text-align:right;}
+ul.jPag-pages li span.jPag-previous-img{background:url(../images/previous.png) no-repeat center right;}
+ul.jPag-pages li span.jPag-next-img{background:url(../images/next.png) no-repeat center left;}
+span.jPag-sprevious-img{background:url(../images/sprevious.png) no-repeat center right;}
+span.jPag-snext-img{background:url(../images/snext.png) no-repeat center left;}
+
+ body{ margin:0 auto; width:100%; height:100%; font-family:"微软雅黑";}
+ #navbar{ background-color:#FFF; padding-left:20px; padding-bottom:6px; padding-top:10px; margin:1%; height:50px;}
+ .navbar-brand{ padding-left:30px;}
+ .col-md-push-2{ float:right;}
+ 
+ .main{margin:1%; padding:60px 100px; background-color:#FFF; line-height:30px;border:solid 1px #DEE0E0; width:99%;}
+ .table-responsive{ margin:2px 20px; padding:20px 10px; text-align:center;}
+ .table-responsive table thead tr th{ text-align:center;}
+ .tablelink1{ padding-left:28px; margin-right:20px;}
+#demo4{ text-align:center; margin-left:-10%;}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+.content{margin-left:13%;margin-top:25%;}
+/*.btn-group{height:18px;}*/
+.btn{border-radius: 0px;padding: 4px 14px;font-size:12px;}
+.btn .caret {margin-left: 3px;}
+.dropdown-menu{font-size:12px;}
+body { overflow-x:hidden; }  
+#top-bar {
+z-index: 999; position: absolute; padding-bottom: 0px; margin: 0px; padding-left: 0px; width: 100%; padding-right: 0px; height: 14px; overflow: hidden; top: 0px; padding-top: 0px; left: 0px; margin-left:1%;
+}
+#topbar-inner {
+    background:url(../images/dotted.png);height:14px;width:100%;
+}
+html > body #top-bar {position: fixed}
+
+.main {
+    background: url(../images/dotted.png);
+    padding-top: 10px;
+}

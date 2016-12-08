@@ -1,0 +1,256 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-family:"Arial Black", Gadget, sans-serif;
+	list-style:none;
+}
+/* title */
+#title{
+	width: 100%;
+	height: 40px;
+/* 	border: solid 1px red; */
+	margin: 0 auto;
+}
+#title p{
+	font-size: 22px;
+	text-align: center;
+	padding-top: 5px;
+}
+/* header */
+.container{
+  width:100%;
+  height:102px;
+  margin:0 auto;
+/*   border:1px solid red; */
+  overflow:hidden;
+  background: #C0C0C0;
+  text-align:center;
+}
+.container-tit{
+  width:100%;
+  height:46px;
+  background:#000;
+}
+.container-tit ul{
+   margin-right:32%;
+}
+.container-tit li{
+  float:right;
+  width:158px;
+  height:46px;
+  line-height:46px;
+  text-align:center;
+  overflow:hidden;
+  background:#FFF;
+  background:#000;
+}
+.container-tit li.select{
+  background:#C0C0C0;
+  border-left:1px solid #eee;
+  border-right:1px solid #eee;
+  padding:0;
+  font-weight:bolder;
+}
+.container li a:link,.container li a:visited{
+  text-decoration:none;
+  color:#fff;
+}
+.container .mod li a{
+	font-size: 18px;
+}
+.container .container-tit a{
+	font-size: 20px;
+}
+.container li a:hover{
+  color:#fff;
+}
+.container .mod a:hover{
+	color:#000;
+}
+.container-con .mod{
+  padding-left:34%;
+  padding-top:1%;
+}
+.container-con .mod ul li{
+  float:left;
+  width:143px;
+  height:38px;
+  overflow:hidden;
+}
+#header{
+	width: 100%;
+	height: 102px;
+/* 	border: solid 1px blue; */
+	margin: 0 auto;
+}
+#banner{
+	width: 100%;
+	height: 450px;
+/* 	border: solid 1px red; */
+}
+#banner img{
+	width: 100%;
+	height: 450px;
+}
+
+
+
+#main {
+	width: 100%;
+	height: 800px;
+/* 	border: solid blue 1px; */
+}
+#main #message{
+	width: 1200px;
+	height: 800px;
+/* 	border: solid 1px red; */
+	margin: 0 auto;
+	background: #c0c0c0;                                                                        
+}
+#message .p-detail{
+	width: 1200px;
+	height: 60px;
+/* 	border: solid 1px black; */
+	border-bottom: solid 1px #6b6b6b;
+	margin: 0 auto;
+}
+#message .p-detail p{
+	text-align: right;
+	padding: 25px 40px 20px;
+}
+#message .p-detail a{
+	text-decoration: none;
+	color: #303030;
+	font-size: 14px;
+}
+#message #line{
+	width: 100%;
+	height: 20px;
+/* 	border: solid 1px red; */
+}
+#message #demo{
+	width: 800px;
+	height: 320px;
+/* 	border: solid red 1px; */
+	margin: 0 auto;
+} 
+.jqtransform{
+	width: 700px;
+/* 	border: 1px solid; */
+}
+.jqtransform div{
+	width: 700px;
+	height: 50px;
+	line-height: 50px;
+/* 	border: 1px red solid; */
+}
+.jqtransform p{
+	float: left;
+	width: 280px;
+	font-size: 18px;
+}
+.jqtransform div:first-child select{
+	padding-left: 25px;
+	width:143px;
+	height: 35px;
+}
+.jqtransform option{
+	  height: 35px;
+	padding-left: 25px;
+}
+.jqtransform input{
+	width:243px;
+	height: 35px;
+}
+.jqtransform .button input{
+	width: 80px;
+	margin-left: 50px;
+}
+#message #list{
+	width: 800px;
+	height: 272px;
+/* 	border: solid 1px blue; */
+	margin: 0 auto;
+}
+table{
+	empty-cells:show;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+#grid td,#grid th{
+	padding:14px;
+	border:#E3E3E3 1px solid;
+	font-size:16px;
+	height:16px;
+	line-height:16px;
+	text-align: center;
+}
+#grid tr td span{
+	color:#686868;
+}
+#grid tr td.st1{
+	color:#ff0000
+}
+#bootom{
+	width: 750px;
+	height: 50px;
+/* 	border: solid 1px red; */
+	margin-left: 200px;
+	background: #fff;
+}
+#bootom .totalNum{
+	width: 150px;
+	height: 30px;
+	padding: 10px;
+	margin-left: 40px;
+/* 	border: solid 1px blue; */
+	float:left;
+}
+#bootom .pagechose{
+		width: 250px;
+	height: 30px;
+	padding: 10px;
+/* 	border: solid 1px blue; */
+	float:left;
+}
+#bootom .pageGo{
+		width: 220px;
+	height: 30px;
+	padding: 10px;
+/* 	border: solid 1px blue; */
+	float:left;
+}
+/*footer*/
+#footer{
+	width: 100%;
+	height: 100px;
+	background:#000;
+	margin: 0 auto;
+}
+#footer .footer_wraper{
+	width: 1200px;
+	height: 60px;
+/* 	border: solid 1px blue; */
+	margin: 0 auto;
+}
+#footer .footer_wraper ul{
+	list-style: none;
+}
+#footer .footer_wraper ul li a{
+	text-decoration: none;
+	float:left;
+	margin-top: 20px;
+	margin-left: 50px;
+	color: #fff;
+}
+#footer .footer_bootom{
+	width:300px;
+	height: 20px;
+/* 	border: solid 1px green; */
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+}
+

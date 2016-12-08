@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+ body{ margin:0 auto;font-family:"微软雅黑";}
+ .navbar{color:#000; border:solid #ccc 1px;}
+ .container{
+    padding:0 auto;
+    margin:0 auto; 
+    border:solid 1px #ccc;
+    height:195px; width:100%;
+    box-shadow:#CCC;
+}
+ .row{ padding:30px 0px; color:#fff;}

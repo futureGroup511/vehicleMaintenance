@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.ui.theme" value="simple" />
+    
+    <package name="default" namespace="/" extends="json-default">
+    	<!-- 定义新的拦截器栈, 配置 prepare 拦截器栈的 alwaysInvokePrepare 参数值为 false -->
+		<interceptors>
+    		<interceptor name="checkPrivilege" class="com.future.service.util.CheckLoginInterceptor"></interceptor>
+			<interceptor-stack name="sshStack">
+				<interceptor-ref name="checkPrivilege"></interceptor-ref>
+				<interceptor-ref name="paramsPrepareParamsStack">
+					<param name="prepare.alwaysInvokePrepare">false</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 使用新的拦截器栈 -->
+		<default-interceptor-ref name="sshStack"></default-interceptor-ref>
+    	
+		<!--定义全局Result--> 
+		<global-results> 
+			<result name="error">/WEB-INF/jsp/CarAction/error.jsp</result> 
+		</global-results> 
+		
+    	<!-- 定义全局异常映射 --> 
+		<global-exception-mappings> 
+			<exception-mapping result="error" exception="java.lang.Exception"> </exception-mapping> 
+		</global-exception-mappings>
+    	<action name="carInformation_*" method="{1}" class="carAction">
+    	    <!-- 刘阳 -->
+    	    <result name="loginUI">/WEB-INF/jsp/userAction/loginUI.jsp</result>
+    	    
+    	    <result name="input">/WEB-INF/jsp/CarAction/carInformation_input.jsp</result>
+    	    <result name="queryByCarNum" type="json"></result>
+    	    <result name="toughtProcessGetCarFileNum" type="json"></result>
+    	    <result name="deleteCarInformationSuccess" type="json"></result>
+    	    <!-- 添加执行完毕之后再跳回添加界面 -->
+    	   	<result name="input">/WEB-INF/jsp/CarAction/carInformation_input.jsp</result>
+    	    <!-- <result name="addCarInformationSuccess">/WEB-INF/jsp/CarAction/carInformation_input.jsp</result> -->
+    	    <result name="addCarInformationSuccess" type="redirectAction">carInformation_put.action</result>
+    	    	    
+    	    <result name="AllCarInformation">/WEB-INF/jsp/CarAction/allCarInformation.jsp</result>
+    	    <result name="SeeTheCarAllInformation">/WEB-INF/jsp/CarAction/theCarAllInformation.jsp</result>
+    	    <result name="deleteCarToAllCarInformation" type="redirectAction">carInformation_seeAllCarInformation.action?currentPage=${currentPage }</result>
+    	    <result name="toUpdateCarInformationInput">/WEB-INF/jsp/CarAction/updateCarInformationInput.jsp</result>
+    	    <result name="deleteCarToFuzzyAllPage" type="redirectAction">carInformation_getCarBySomeCarNum.action?currentPage=${currentPage }</result>
+    	    <result name="toFuzzyUpdateInputPage">/WEB-INF/jsp/CarAction/fuzzyUpdateCarInput.jsp</result>
+    	    <result name="fuzzyQueryToPage">/WEB-INF/jsp/CarAction/fuzzyQueryPage.jsp</result>
+    	    <result name="deleteTheCarFuzzy" type="redirectAction">carInformation_getCarBySomeCarNum.action?currentPage=${currentPage }</result>
+    	    <result name="updateSuccessToFuzzyPage" type="redirectAction">carInformation_getCarBySomeCarNum.action?currentPage=${currentPage }</result>
+ 		</action>   	
+    	<action name="repairInformation_*"  method="{1}"   class="repairHistoryAction">
+    		<!-- 刘阳 -->
+    	    <result name="loginUI">/WEB-INF/jsp/userAction/loginUI.jsp</result>
+    	    <result name="deletesuccess">/WEB-INF/jsp/RepairHistoryAction/query.jsp</result>
+    	    <result name="query">/WEB-INF/jsp/RepairHistoryAction/query.jsp</result>
+    	    <result name="repairHistoryInput">/WEB-INF/jsp/RepairHistoryAction/repairHistoryInput.jsp</result>
+    	   	<result name="query">/WEB-INF/jsp/RepairHistoryAction/query.jsp</result>
+    	    <result name="repairHistorySuccess">/WEB-INF/jsp/RepairHistoryAction/repairHistoryInput.jsp</result>
+    	</action>
+    	<action name="car_*" method="{1}"    class="carAction">
+    	    <!-- 刘阳 -->
+    	    <result name="loginUI">/WEB-INF/jsp/userAction/loginUI.jsp</result>
+    	    
+    	    <result name="expire">/WEB-INF/jsp/CarAction/car_expire.jsp</result>
+    		 <result name="carnum"  type="json"></result>
+    	    <result name="jugeCarNumAndFile"  type="json"></result>
+    	    <result name="carfilenum" type="json"></result>
+    	</action>
+    	
+    	<!-- 用户 -->
+    	<action name="user_*" class="userAction" method="{1}">
+    	
+    		<result name="loginUI">/WEB-INF/jsp/userAction/loginUI.jsp</result>
+    		<!-- <result name="index">/WEB-INF/jsp/RepairHistoryAction/repairHistoryInput.jsp</result> -->
+    		<!-- <result name="index">/WEB-INF/jsp/userAction/index.html</result> -->
+    		<result name="index" type="redirect">/index.jsp</result>
+    		<result name="index1">/WEB-INF/jsp/userAction/index.html</result>
+    		<result name="denglu" type="redirectAction">user_loginUI</result>
+    		
+    		<result name="userInfo">/WEB-INF/jsp/userAction/userInfo.jsp</result>
+    		<result name="updatePasswordUI">/WEB-INF/jsp/userAction/updatePasswordUI.jsp</result>
+    		<result name="user_list">/WEB-INF/jsp/userAction/user_list.jsp</result>
+    		<result name="saveUI">/WEB-INF/jsp/userAction/saveUI.jsp</result>
+    		<result name="editUI">/WEB-INF/jsp/userAction/editUI.jsp</result>
+    		<result name="userlist" type="redirectAction">user_list</result>
+    		<result name="isOrNot" type="json"></result>
+    	</action>
+    </package>
+</struts>

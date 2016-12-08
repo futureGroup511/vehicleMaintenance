@@ -1,0 +1,18 @@
+
+div{
+  width: 550px;
+  text-align: center;
+  padding-top: 120px;
+
+}
+.img{
+  
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%
+  
+}
+img{
+  position: absolute
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.future.domain">
+
+	<class name="User" table="t_user">
+		<id name="id" type="int">
+		 	<column name="I_ID" />
+			<generator class="native" />
+		</id>
+		
+		<property name="name" type="java.lang.String" unique="false">
+			<column name="S_NAME" />
+		</property>
+		
+		<property name="loginName" type="java.lang.String">
+			<column name="S_LOGINNAME" />
+		</property>
+		
+		<property name="password" type="java.lang.String">
+			<column name="S_PASSWORD" />
+		</property>
+		
+		<property name="phoneNum" type="java.lang.String">
+			<column name="S_PHONENUM" />
+		</property>
+		
+		<!-- 
+			repairHistorys:本类和repairHistory一对多
+		 -->
+		 <set name="repairHistorys">
+			<key column="repairManId"></key>
+			<one-to-many class="RepairHistory" />
+		</set>
+		
+		
+	</class>
+
+</hibernate-mapping>

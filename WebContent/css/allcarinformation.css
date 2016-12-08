@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+#main {
+	width: 100%;
+	height: 800px;
+/* 	border: solid blue 1px; */
+}
+#main #message{
+	width: 1200px;
+	height: 701px;
+/* 	border: solid 1px red; */
+	margin: 10px auto;
+	background: RGBA(209, 209, 209, 0.9);                                                                       
+}
+#message .p-detail{
+	width: 1200px;
+	height: 60px;
+/* 	border: solid 1px black; */
+	border-bottom: solid 1px #6b6b6b;
+	margin: 0 auto;
+}
+#message .p-detail p{
+	text-align: right;
+	padding: 25px 40px 20px;
+}
+#message .p-detail a{
+	text-decoration: none;
+	color: #303030;
+	font-size: 14px;
+}
+#message #line{
+	width: 100%;
+	height: 20px;
+/* 	border: solid 1px red; */
+}
+#message #demo{
+	width: 800px;
+	height: 90px;
+/* 	border: solid red 1px; */
+	margin: 0 auto;
+} 
+.jqtransform{
+	width: 700px;
+	padding-bottom: 50px;
+	padding-top: 20px;
+}
+.jqtransform div{
+	width: 700px;
+	height: 50px;
+	line-height: 50px;
+}
+.jqtransform p{
+	float: left;
+	width: 280px;
+	font-size: 18px;
+}
+
+.jqtransform option{
+	  height: 35px;
+	padding-left: 25px;
+}
+.jqtransform input{
+	width:243px;
+	height: 35px;
+}
+.jqtransform select{
+	width:243px;
+	height: 35px;
+}
+.jqtransform .button input:first-child{
+		right: 590px;
+}
+.jqtransform .button input,.jqtransform .btn input{
+	width: 80px;
+	margin-left: 50px;
+	position: absolute;
+	right: 350px;
+	margin-top: -43px;
+}
+.jqtransform .btn input{
+	margin-top: -93px;
+}
+#message #list{
+	width: 900px;
+	height: 320px;
+/* 	border: solid 1px blue; */
+	margin: 0 auto;
+	overflow: hidden;
+	display: block;
+	margin:0 auto
+}
+table{
+	empty-cells:show;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+#grid td,#grid th{
+	padding:14px;
+	border:#E3E3E3 1px solid;
+	font-size:16px;
+	height:16px;
+	line-height:16px;
+	text-align: center;
+}
+#grid tr td span{
+	color:#686868;
+}
+#grid tr td.st1{
+	color:#ff0000
+}
+#bootom{
+	width: 900px;
+	height: 50px;
+	background: #fff;
+	margin: 50px auto;
+}
+#bootom .totalNum{
+	width: 150px;
+	height: 30px;
+	padding: 10px;
+	margin-left: 40px;
+/* 	border: solid 1px blue; */
+	float:left;
+}
+#bootom .pagechose{
+	width: 400px;
+	height: 30px;
+	padding: 10px;
+/* 	border: solid 1px blue; */
+	float:left;
+	margin-left:150px;
+}
+#bootom .pageGo{
+		width: 220px;
+	height: 30px;
+	padding: 10px;
+/* 	border: solid 1px blue; */
+	float:left;
+}
+/*footer*/
+#footer{
+	width: 100%;
+	height: 100px;
+	background:#000;
+	margin: 0 auto;
+}
+#footer .footer_wraper{
+	width: 1200px;
+	height: 60px;
+/* 	border: solid 1px blue; */
+	margin: 0 auto;
+}
+#footer .footer_wraper ul{
+	list-style: none;
+		padding-left: 15%;
+}
+#footer .footer_wraper ul li a{
+	text-decoration: none;
+	float:left;
+	margin-top: 20px;
+	margin-left: 50px;
+	color: #fff;
+}
+#footer .footer_bootom{
+	width:300px;
+	height: 20px;
+/* 	border: solid 1px green; */
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+}
+

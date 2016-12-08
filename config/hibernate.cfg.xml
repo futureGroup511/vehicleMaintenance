@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 1.数据库连接信息 <property name="connection.url">jdbc:mysql:///itcastoa0720</property> 
+			<property name="connection.driver_class">com.jdbc.mysql.Driver</property> 
+			<property name="connection.username">root</property> <property name="connection.password"></property> -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		
+		<!-- 2.其他配置 -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- 3.映射文件 -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<!-- 测试 -->
+		<!-- <mapping resource="com/future/test/User.hbm.xml" /> -->
+		
+		
+		<mapping resource="com/future/domain/User.hbm.xml" />
+		<mapping resource="com/future/domain/Car.hbm.xml" />
+		<mapping resource="com/future/domain/RepairHistory.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.future.domain">
+
+	<class name="RepairHistory" table="t_RepairHistory">
+	
+		<id name="id" type="int">
+		 	<column name="I_ID" />
+            <generator class="native"/>
+		</id>
+		
+		<property name="repairDate" type="java.sql.Date">
+			<column name="D_REPAIRDATE" />
+		</property>
+		
+		<property name="nextrepairDate" type="java.sql.Date">
+			<column name="D_NEXTREPAIRDATE" />
+		</property>
+		
+		<property name="status" type="int">
+			<column name="I_STATUS" />
+		</property>
+		
+		<!-- 
+			car:本类和Car多对一
+		 -->
+		 <many-to-one name="car" class="Car" column="carId"></many-to-one>
+		 
+		 
+		<!-- 
+			repairMan:本类和User多对一
+		 -->
+		 <many-to-one name="repairMan" class="User" column="repairManId"></many-to-one>
+		
+	</class>
+	
+</hibernate-mapping>

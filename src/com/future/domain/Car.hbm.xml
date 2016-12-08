@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.future.domain">
+
+	<class name="Car" table="t_car">
+		
+		<id name="id" type="int">
+			 <column name="I_ID" />
+			<generator class="native" />
+		</id>
+
+		<property name="fileNum" type="java.lang.String">
+			<column name="S_FILENAME" />
+		</property>
+		
+		<property name="carType" type="java.lang.String">
+			<column name="S_CARTYPE" />
+		</property>
+		
+		<property name="carOwner" type="java.lang.String">
+			<column name="S_CAROWNER" />
+		</property>
+		
+		<property name="address" type="java.lang.String">
+			<column name="S_ADDRESS" />
+		</property>
+		
+		<property name="carNum" type="java.lang.String">
+			<column name="S_CARNUM" />
+		</property>
+		
+		<property name="businessNum" type="java.lang.String">
+			<column name="S_BUSINESSNUM" />
+		</property>
+		
+		<property name="factoryNum" type="java.lang.String">
+			<column name="S_FACTORYNUM" />
+		</property>
+		
+		<property name="engineNum" type="java.lang.String">
+			<column name="S_ENGINENUM" />
+		</property>
+		
+		<property name="chassisNum" type="java.lang.String">
+			<column name="S_CHASSISNUM" />
+		</property>
+		
+		<property name="color" type="java.lang.String">
+			<column name="S_COLOR" />
+		</property>
+		
+		<property name="phoneNum" type="java.lang.String">
+			<column name="S_PHONENUM" />
+		</property>
+		
+		<property name="purchaseDate" type="java.util.Date">
+			<column name="D_PURCHASEDATE" />
+		</property>
+		
+		<property name="capacity" type="float">
+			<column name="I_CAPACITY" sql-type="decimal(10,5)"/>
+		</property>
+		
+		<property name="status" type="int">
+			<column name="I_STATUS" />
+		</property>
+		
+		
+		<!-- repairHistorys ：本类和RepairHistory一对多 -->
+		<set name="repairHistorys" inverse="true">
+			<key column="carId"></key>
+			<one-to-many class="RepairHistory" />
+		</set>
+		
+
+	</class>
+
+</hibernate-mapping>

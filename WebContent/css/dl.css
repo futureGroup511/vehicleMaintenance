@@ -1,0 +1,79 @@
+.main{
+	background:url(../images/banner-1.jpg) no-repeat;
+	background-position:bottom right;
+	margin-top: 20px;
+}
+.main img{
+	position: absolute;
+	width: 100%;
+	height: 550px;
+	z-index: 1
+}
+.main-img-bottom{
+	width: 500px;
+	height: auto;
+	display: block;
+	overflow: hidden;
+	border: 1px solid #000;
+	margin: 0 auto;
+	text-align: center;
+}
+.main-one{
+	width: 400px;
+	margin: 35px auto;
+	height: 500px;
+	background: rgba(2,75,91,0.5);
+    color: #fff;
+	z-index: 51;
+	margin-left: 60px;
+	position: absolute;
+
+}
+.main h2{
+	text-align: center;
+	padding: 50px;
+	letter-spacing:15px;
+}
+.main form{
+	width: 500px;
+	margin: 20px auto;
+}
+.main form .btntext{
+	color: #fff;
+	font-size: 16px;
+	margin-left: -92px;
+}
+.main form .btntext input{
+	margin-left: 20px;
+	width: 265px;
+	height: 25px;
+}
+.main form div{
+	padding: 20px
+}
+.main .checkbox{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	padding: 70px;
+}
+.main .checkbox span{
+	padding-left: 20px;
+}
+.img{
+	text-align: center;
+	margin: 60px auto;
+}
+.img input{
+	width: 96px;
+	height: 34px;
+	line-height: 14px;
+	background: -webkit-linear-gradient(#2CACF0, #0071AF); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#2CACF0, #0071AF); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#2CACF0, #0071AF); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#2CACF0, #0071AF); /* 标准的语法 */
+	border: 0px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bolder;
+}

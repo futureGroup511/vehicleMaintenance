@@ -1,0 +1,97 @@
+
+/****************日期插件样式******************/
+.ui-datepicker-append{
+    color: #999999;
+    font-size: 13px;
+    font-family: 'Microsoft YaHei';
+    position: absolute;
+    top: 0px;
+}
+.ui-datepicker{
+    width: 305px;
+    padding: 0px;
+    border: 1px solid #dcdcdc;
+    border-radius: 0px;
+}
+.ui-datepicker-header{
+    width: 305px;
+    height: 31px;
+    line-height: 31px;
+    border: none;
+    border-radius: 0px;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    background:url("../images/ui_header_bg.png") left top repeat-x;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    color: #555555;
+    font-size: 12px;
+    background: #fdfdfd;
+    margin: 0px;
+    padding: 0px;
+}
+a.ui-state-default:hover,.ui-datepicker-current-day .ui-state-active {
+    background: #3996ff;
+    color: #ffffff;
+}
+ui-state-hover .ui-icon,.ui-datepicker-next-hover,
+ui-state-hover .ui-icon,.ui-datepicker-prev-hover{
+    background: none;
+}
+
+.ui-datepicker-next:hover,.ui-datepicker-prev:hover{
+    background: none;
+    border: none;
+}
+.ui-widget-header .ui-icon,.ui-state-hover .ui-icon{
+    background: url("../images/ui_date_bg.png") no-repeat;
+    top: 6px;
+}
+.ui-datepicker-next .ui-icon-circle-triangle-e{
+    width: 18px;
+    height: 11px;
+    background-position:0px -22px;
+}
+
+/****************时间列表******************/
+
+.stay-list-left  .sea-div{
+    height: 35px;
+    line-height: 35px;
+    /* margin-top: 33px; */
+    position: relative;
+    margin-left:15px;
+}
+.stay-list-left .search-lab{
+    width: 84px;
+    text-align: right;
+    display: block;
+    float: left;
+}
+.sea-div input[type=text]{
+    width: 290px;
+    height: 33px;
+    line-height: 33px;
+    color: #ff5400;
+    font-family: arial;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    margin-left: 15px;
+    text-indent: 10px;
+    display: block;
+    float: left;
+}
+.sea-div input.hotel-name{
+    line-height: 24px;
+    color: #b8b8b8;
+}
+.sea-div .ui-datepicker-append{
+    left: 330px;
+}
